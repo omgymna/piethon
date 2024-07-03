@@ -1,6 +1,6 @@
 import random
 from art import hl_logo, vs_art
-from game_data import data
+from game_data import instagram_data
 from replit import clear
 
 #This is a guessing game to guess who has more instagram followers. Game continues until wrong answer is given.
@@ -9,13 +9,13 @@ from replit import clear
 should_continue = True
 score = 0
 hl_logo()
-choice_a = random.choice(data)
+choice_a = random.choice(instagram_data)
 
 while should_continue:
   
-  choice_b = random.choice(data)
+  choice_b = random.choice(instagram_data)
   if choice_b == choice_a:
-    choice_b = random.choice(data)
+    choice_b = random.choice(instagram_data)
 
   print(f"Compare A: {choice_a['name']}, a {choice_a['description']}, from {choice_a['country']}")
   vs_art() 
